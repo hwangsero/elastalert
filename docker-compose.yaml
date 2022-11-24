@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    elastalert:
+        container_name: elastalert
+        restart: always
+        volumes:
+            - './elastalert.yaml:/opt/elastalert/config.yaml'
+            - './rules:/opt/elastalert/rules'
+        image: jertel/elastalert2
